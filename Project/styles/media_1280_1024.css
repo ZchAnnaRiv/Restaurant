@@ -1,0 +1,275 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Istok Web';
+
+}
+
+.container{
+	max-width: 960px;
+	min-width: 480px;
+	margin-left: 15vw;
+}
+.flex-align{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+
+}
+.main-color{
+	background-color: #F1D950;
+}
+.head-style{
+	height: 80px;
+	background: linear-gradient(to top, #F1D950, #f8ecaa);
+}
+.main-img{
+	background-image: url("../imgs/slider-rest-1.jpg");
+	background-repeat: no-repeat;
+	background-color: grey;
+	background-blend-mode: multiply;
+	height: 550px;	
+	position: relative;
+	background-size: cover;
+}
+a{
+	text-decoration: none; 
+	color: #000;
+}
+input:focus{
+	outline: 0;
+}
+.menu a{
+	font-size: 24px;
+}
+
+.menu a:not(:last-child):after{
+	content: "  |  ";
+	opacity: 0.1;	
+}
+
+.logo-text{
+	font-family: 'Courgette';
+	font-size: 25px;
+	color: #fff;
+}
+.logo-img{
+	width: 70px;
+	height: 70px; 
+}
+
+.search-field{
+	width: 400px;
+	height: 50px;
+	border-radius: 30px ;
+	padding-left: 15px;
+}
+.search-button{
+	width: 30px;
+	margin-bottom: -10px;
+	margin-left: 10px;
+}
+
+.dish-menu-buttons{
+	display: inline-flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+
+}
+.dish-menu-buttons input[type = 'button']{
+	font-size: 24px;
+	text-decoration: none; 
+	width: 150px;	
+	height: 40px;
+	background-color: transparent;
+	border-radius: 35px 0;
+	border: 3px solid #F1D950;
+}
+.dish-menu-buttons input[type = 'button']:hover{
+	background: #F1D950;
+	color: #fff;
+	transition: 0.5s;
+	transform: scale(1.1);
+}
+.big-text{
+	color: #fff;
+	font-size: 40px;
+	text-align: right;
+	font-style: italic;
+
+}
+.reserve-button{
+	position: absolute;	
+	bottom: 15%;
+	left: 18vw;
+	background: linear-gradient(to top,#c1a710, #F1D950, #fbf5d0);
+	width: 25vw;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	font-size: 25px;
+	font-style: italic;
+}
+.reserve-button:hover{
+	transition: 0.5s;
+	color: #fff;
+	
+}
+.top-button input{
+	height: 70px;
+	width: 70px;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	background-color: #F1D950;
+	color: #fff;
+	border-radius: 90px;
+	border: none;
+}
+
+.top-button input:hover{
+	transition: 0.5s;
+	transform: scale(1.1);
+}
+.central-text{
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Istok Web';
+}
+.pagination {
+	display: inline-flex;
+	justify-content: center;
+	width: 100%;
+
+}
+.pagination li {
+	list-style: none;
+	width: 20px;
+	text-align: center;
+	margin-right: 15px;
+	border-radius: 3px;
+}
+.pagination-button {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background-color: transparent;
+	border: 2px solid #F1D950;
+	border-radius: 3px;
+}
+.pagination-button:hover,  .pagination-button:focus{
+	background-color: #F1D950;
+	outline: 0;
+}
+
+
+.menu-dishes-list{
+	display: inline-flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 80px;
+	margin-left: 0;
+	height: 620px;
+}
+.menu-dishes-list .dish{
+	margin-right: 20px;
+	width: 300px;
+	height: 300px;
+	flex-wrap: wrap;
+	border-radius: 20px;
+}
+.menu-dishes-list .dish p{
+	margin: 5px;
+	text-align: center;		
+}
+.dish-describe{
+	font-size: 0px;
+}
+.menu-dishes-list .dish:hover{
+	transform: scale(1.2);
+	transition: 0.5s;
+	background-color: #fff;
+	border-bottom: 3px solid #F1D950;
+}
+.menu-dishes-list .dish:hover .dish-describe{
+	font-size: inherit;
+}
+
+.menu-dishes-list img{
+	width: 300px;
+	height: 200px;
+	border-radius: 20px;
+}
+.menu-dishes-list .img-size{
+	height: 200px;
+	overflow: hidden;
+
+}
+.menu-dishes-list span{
+	text-align: center;
+	padding-top: 0;
+}
+
+.our-team{
+	display: inline-flex;
+	justify-content: space-around;
+}
+.our-team img{
+	height: 250px;
+	width: 250px;
+	border-radius: 200px;
+}
+.our-team figcaption{
+	text-align: center;
+	font-style: italic;
+}
+.our-team div:hover{
+	transition-duration: 0.5s;
+	transform: scale(1.2,1.2);
+}
+
+.map-style{
+	overflow: hidden;
+	width: 450px;
+	height: 450px;
+	border: 10px double #F1D950;
+	border-radius: 500px;
+}
+
+
+.form-style{
+	display: flex;
+	flex-direction: column;
+	width: 25vw;
+	align-items: center;
+	border-radius: 20px;
+	padding: 0 20px 25px 20px;
+	border: 3px dashed #F1D950;
+	text-align: center;
+	font-family: "Istok Web";
+	font-size: 24px;
+}
+
+.form-style input{
+	height: 35px;
+	margin: 10px 0;
+	width: 70%;
+	border: 2px solid #F1D950;
+	padding: 5px;
+	border-radius: 10px;
+	font-size: 20px;
+}
+.form-style input[type="submit"]{
+	background: #F1D950;
+	border: none;
+	height: 50px;
+	font: inherit;
+}
+footer{
+	margin-top: 50px;
+	height: 100px;
+	background:  #000;
+	color: #fff;
+}

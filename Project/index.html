@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title >RedRay</title>
+		<link rel="shortcut icon" href="imgs/logo.ico">
+		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<script src="js/menu_dishes_adding.js"></script>
+	</head>
+	<body>
+			<!-- Header --
+			<header class=" flex-align head-style main-color"   id="Main">
+				<div class="flex-align logo-text">
+					<img class="logo-img" src="imgs/logo.png" alt="logo">
+					<h1 ><span style="color: red">Red</span>Ray</h1>
+				</div>
+				<div>
+					<form  action="/search/" class="search">
+						<input class="search-field" type="search" required placeholder=" Поиск по сайту" >
+						<input  type="image" src="imgs/search.png" class="search-button">
+					</form>
+				</div>
+				<div>
+					<nav class="menu">
+						<a href="#Main">Главная</a>
+						<a href="#Menu">Меню</a>
+						<a href="#About">О нас</a>
+						<a href="#Contacts">Контакты</a>
+					</nav>
+				</div>
+			</header>
+			!-- Main --
+			<section class="main-img ">
+				<div >
+					<div class="container flex-align big-text">
+						<input type="button" class="reserve-button" name="Reserve" value="Зарезервировать стол">
+						<blockquote>
+							<p>После хорошего обеда можно простить кого угодно, даже своих родственников.</p>
+							<cite>Оскар Уайльд</cite>
+						</blockquote>
+					</div>
+				</div>
+				<div class="top-button">x	
+					<a href="#Main"><input type="image" src="imgs/top-arrow.png" name="Top" value="Наверх"></a>
+				</div>
+			</section> -->
+			<!-- Menu -->
+			<section class="container" id="Menu">
+				<div class="central-text">
+					<p>М е н ю</p>
+				</div>
+
+				<div class=" dish-menu-buttons">
+					<input type="button" onclick="PageCounter('Main');" name="MainDish" value="Основное">
+					<input type="button" name="Snack" value="Закуски">
+					<input type="button" name="Drinks" value="Напитки">
+					<input type="button" name="Desert" value="Десерты">
+				</div>
+				<div class="container menu-dishes-list" id="dish-list">
+				</div>
+				<div>
+					<ul id="dish-pagination" class="pagination flex-align">
+						
+					</ul>
+				</div>
+			</section>
+
+			<!-- About --
+			<section id="About">
+				<div class="container ">
+					<div class="central-text">
+						<p>Наша команда</p>
+					</div>
+					<div class="our-team">
+						<div>
+							<figure>
+								<img src="imgs/photo_workers/worker1.jpg">
+								<figcaption>Антонио Сандерс<br>Повар</figcaption>
+							</figure>
+						</div>
+						<div>
+							<figure>
+								<img src="imgs/photo_workers/worker1.jpg">
+								<figcaption>Антонио Сандерс<br>Повар</figcaption>
+							</figure>
+						</div>
+						<div>
+							<figure>
+								<img src="imgs/photo_workers/worker1.jpg">
+								<figcaption>Антонио Сандерс<br>Повар</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+			!-- Contacts --
+			<section class="container" id="Contacts">
+				<div  class="central-text">
+					<p>Контакты</p>
+				</div>
+				<div class="flex-align">
+					<div class="map-style">
+						<a href="https://www.google.com.ua/maps/place/%D0%9A%D0%B5%D1%81%D1%81%D0%BE%D0%BD+%22%D0%A1%D1%82%D0%B0%D0%BB%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D1%82%D1%83%D0%BD%D0%BD%D0%B5%D0%BB%D1%8C%22/@50.4996125,30.5197166,16z/data=!4m5!3m4!1s0x40d4d1f77d80c631:0x18870b1315aefe39!8m2!3d50.4989198!4d30.5239181?hl=ru" target="blank">
+							<img  src="imgs/map.png">
+						</a>
+					</div>
+					
+					<div>
+						<div>
+							
+							<p>Ресторан находится по адресу:
+								<a href="https://www.google.com.ua/maps/place/%D0%9A%D0%B5%D1%81%D1%81%D0%BE%D0%BD+%22%D0%A1%D1%82%D0%B0%D0%BB%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D1%82%D1%83%D0%BD%D0%BD%D0%B5%D0%BB%D1%8C%22/@50.4996125,30.5197166,16z/data=!4m5!3m4!1s0x40d4d1f77d80c631:0x18870b1315aefe39!8m2!3d50.4989198!4d30.5239181?hl=ru" target="blank">
+									Куриковская 76/5
+								</a>
+							</p>
+							<p>Время работы: 10:00-23:00</p>
+							<p>+39898928982 Viber Facebook</p>
+							
+						</div>
+						<form class="form-style">
+							<p>Заказать звонок</p>
+							<input type="text" name="Name" placeholder ="Ваше имя" required>
+							<input type="text" name="Phone" value="+380" required>
+							<input type="submit" name="Submit" value="Перезвоните мне!">
+						</form>
+					</div>
+				</div>
+			</section>
+			!-- Footer --
+			<footer class="flex-align">
+				<div class="logo-text">
+					RedRey
+				</div>
+				<div>
+					<p>2019-2019 RedRey</p>
+					<p>All rights reserved</p>
+				</div>
+				<div>
+					V F
+				</div>
+			</footer>
+		-->
+		</body>
+</html>
