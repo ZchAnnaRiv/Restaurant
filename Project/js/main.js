@@ -1,0 +1,1 @@
+@import url(menu_dishes_adding.js);
