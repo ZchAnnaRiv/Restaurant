@@ -1,0 +1,84 @@
+{"dishes" : [ 
+{
+		"Id": "1",
+		"typeOfDish": "Main",
+		"name": "Шарлотка",
+		"describe": "Классная да ябочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "2",
+		"typeOfDish": "Snack",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 240,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "3",
+		"typeOfDish": "Snack",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 210,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "4",
+		"typeOfDish": "Main",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 200,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "5",
+		"typeOfDish": "Main",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "6",
+		"typeOfDish": "Main",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "7",
+		"typeOfDish": "Main",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "8",
+		"typeOfDish": "Main",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "9",
+		"typeOfDish": "Main",
+		"name": "jdjdjdj",
+		"describe": "djdда ябочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+}
+]
+}

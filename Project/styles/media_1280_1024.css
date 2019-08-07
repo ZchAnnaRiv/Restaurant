@@ -29,26 +29,49 @@ body{
 	background-repeat: no-repeat;
 	background-color: grey;
 	background-blend-mode: multiply;
-	height: 550px;	
+	height: 85vh;	
 	position: relative;
 	background-size: cover;
+
 }
+
 a{
 	text-decoration: none; 
 	color: #000;
 }
-input:focus{
+input:focus, select:focus{
 	outline: 0;
+}
+input:hover{
+	cursor: pointer;
+}
+.menu li{
+	list-style: none;
+	margin-right: 10px;
 }
 .menu a{
 	font-size: 24px;
 }
-
-.menu a:not(:last-child):after{
-	content: "  |  ";
-	opacity: 0.1;	
+.menu li a:hover{
+	color: #fff;
+	transition: 0.3s;
 }
 
+.menu li:not(:last-child):after{
+	content: "  |  ";
+	opacity: 0.2;	
+}
+.submenu{
+	display: none;
+	position: absolute;
+	top: 50px;
+	z-index: 2;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.6);
+}
+.menu li:hover .submenu{
+	display: block;
+}
 .logo-text{
 	font-family: 'Courgette';
 	font-size: 25px;
@@ -87,16 +110,17 @@ input:focus{
 	border-radius: 35px 0;
 	border: 3px solid #F1D950;
 }
-.dish-menu-buttons input[type = 'button']:hover{
+.dish-menu-buttons input[type = 'button']:hover,
+.dish-menu-buttons input[type = 'button']:focus {
 	background: #F1D950;
 	color: #fff;
 	transition: 0.5s;
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 .big-text{
 	color: #fff;
 	font-size: 40px;
-	text-align: right;
 	font-style: italic;
 
 }
@@ -115,23 +139,120 @@ input:focus{
 .reserve-button:hover{
 	transition: 0.5s;
 	color: #fff;
-	
 }
-.top-button input{
+.reserve-window-back{
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.reserve-window{
+	z-index: 3;
+	width: 70%;
+	height: 80%;
+	position: absolute;
+	left: 15%;
+	top:5%;
+	background-color: #fff;
+	border-radius: 20px;
+	padding-bottom: 5%;
+	
+
+}
+.reserve-window #reserveExit{
+	-webkit-transform: scale(1.5);
+	        transform: scale(1.5);
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+.reserve-window #reserveExit{
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 2px;
+}
+.reserve-window #reserveExit:active{
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+	background: #F1D950;
+}
+
+.reserve-window #reserveExit:hover{
+	border: 1px solid #F1D950;
+}
+.table-reserve {
+	position: absolute;
+	top: 80px;
+	right: 40px;
+}
+.table-reserve input{
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+	margin-top: 20px;
+	border-radius: 100px;
+	border: 3px solid #F1D950;
+	background-color: #fff;
+	font-size: 40px;
+	font-family: "Lobster";
+}
+.table-reserve input:hover, 
+{	
+	background-color:  #F1D950;
+}
+.reserve-form{
+	position: absolute;
+	left: 80px;
+	top: 80px;
+	font-size: 24px;
+
+}
+.reserve-form select, .reserve-form input{
+	border-radius: 20px;
+	height: 35px;
+	font-size: 24px;
+	margin-top: 5px;
+	padding-left: 5%;
+}
+.reserve-form input[type="button"]{
+	background-color: #fff;
+	border: 3px solid #F1D950;
+	width: 370px;
+	padding-left: 0;
+}
+.reserve-form input[type="button"]:hover{
+	background-color: #F1D950;
+}
+.reserve-form input[type="button"]:active{
+	color: #fff;
+}
+
+.display-none{
+	display: none;
+}
+.number-for-submit input[type="submit"]{
+	background-color: #fff;
+	border: 3px dotted #F1D950;
+}
+.top-button img{
 	height: 70px;
 	width: 70px;
 	position: fixed;
-	right: 50px;
-	bottom: 50px;
+	right: 5%;
+	bottom: 10%;
 	background-color: #F1D950;
 	color: #fff;
 	border-radius: 90px;
 	border: none;
 }
 
-.top-button input:hover{
+.top-button img:hover{
 	transition: 0.5s;
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 .central-text{
 	text-align: center;
@@ -159,7 +280,9 @@ input:focus{
 	border: 2px solid #F1D950;
 	border-radius: 3px;
 }
-.pagination-button:hover,  .pagination-button:focus{
+.pagination-button:hover,
+.pagination-button:focus  
+{
 	background-color: #F1D950;
 	outline: 0;
 }
@@ -167,7 +290,7 @@ input:focus{
 
 .menu-dishes-list{
 	display: inline-flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	margin-top: 80px;
 	margin-left: 0;
@@ -188,7 +311,8 @@ input:focus{
 	font-size: 0px;
 }
 .menu-dishes-list .dish:hover{
-	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	        transform: scale(1.2);
 	transition: 0.5s;
 	background-color: #fff;
 	border-bottom: 3px solid #F1D950;
@@ -227,22 +351,54 @@ input:focus{
 }
 .our-team div:hover{
 	transition-duration: 0.5s;
-	transform: scale(1.2,1.2);
+	-webkit-transform: scale(1.2,1.2);
+	        transform: scale(1.2,1.2);
 }
 
 .map-style{
 	overflow: hidden;
 	width: 450px;
 	height: 450px;
-	border: 10px double #F1D950;
+	border: 30px double #F1D950;
 	border-radius: 500px;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.8);
+	margin-bottom: 70px;
+}
+.map-style img{
+
+	height: 500px;
+}
+.contacts-align{
+	width: 100%;
+	justify-content: space-between;
+	text-align: center; 
+}
+.call-button{
+	width: 70px;
+	height: 70px;
+	border-radius: 100px;
+	position: fixed;
+	bottom: 10%;
+	left: 5%;
+	overflow: hidden;
+
+}
+.call-button input{
+	width: 80px;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+}
+.call-button:hover{
+	transform: rotate(360deg) scale(1.2);
+	transition: 1s;
+
 }
 
-
 .form-style{
-	display: flex;
+	display: none;
 	flex-direction: column;
-	width: 25vw;
+	width: 50%;
 	align-items: center;
 	border-radius: 20px;
 	padding: 0 20px 25px 20px;
@@ -250,9 +406,21 @@ input:focus{
 	text-align: center;
 	font-family: "Istok Web";
 	font-size: 24px;
+	position: fixed;
+	bottom: 0;
+	left: 25%;
+	background: rgba(255,255,255,0.8);
+}
+.form-style span{
+	position: absolute;
+	right: 10%;
+}
+.form-style span:hover{
+	cursor: pointer;
 }
 
 .form-style input{
+
 	height: 35px;
 	margin: 10px 0;
 	width: 70%;

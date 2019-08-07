@@ -1,9 +1,6 @@
-PageCounter('Main');
-readTextFile('Main',0);
-
-function readTextFile(typeOfDish,NumberPage) {
+function readTextFile(typeOfDish, NumberPage) {
     var rawFile = new XMLHttpRequest();
-    let url = "http://localhost:3000/dishes/" +NumberPage + "/" +typeOfDish;
+    let url = "http://localhost:3000/dishes/" + NumberPage + "/" + typeOfDish;
     rawFile.open("GET", url);
     rawFile.onreadystatechange = function() {
         if (rawFile.readyState === 4) {
@@ -16,18 +13,20 @@ function readTextFile(typeOfDish,NumberPage) {
 
 function PageCounter(typeOfDish) {
     var request = new XMLHttpRequest();
-    request.open("GET", 'http://localhost:3000/countPage/typeOfDish', true);
+    document.getElementById("dish-pagination").innerHTML = "";
+    request.open("GET", 'http://localhost:3000/countPage/' + typeOfDish, true);
     request.onreadystatechange = function() {
         if (request.readyState === 4) {
             for (var i = 0; i < request.responseText; i++) {
                 var li = document.createElement('li');
-                li.innerHTML = '<button class="pagination-button" onclick = "readTextFile('+ typeOfDish +','+ Number(i) + ')">' + (Number(i) + 1) + '</button>';
+                li.innerHTML = '<button id="button' + i + '" class="pagination-button" onclick = "readTextFile(' + '\'' + typeOfDish + '\'' + ',' + Number(i) + '); ">' + (Number(i) + 1) + '</button>';
                 document.getElementById("dish-pagination").appendChild(li);
             }
         }
     }
     request.send(null);
 }
+
 
 function showDish(jsonobj) {
     var dishes = jsonobj;
