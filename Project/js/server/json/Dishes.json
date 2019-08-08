@@ -3,7 +3,7 @@
 		"Id": "1",
 		"typeOfDish": "Main",
 		"name": "Шарлотка",
-		"describe": "Классная да ябочная",
+		"describe": "Яблочная",
 		"price": 230,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -11,8 +11,8 @@
 {
 		"Id": "2",
 		"typeOfDish": "Snack",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 240,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -20,8 +20,8 @@
 {
 		"Id": "3",
 		"typeOfDish": "Snack",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 210,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -29,8 +29,8 @@
 {
 		"Id": "4",
 		"typeOfDish": "Main",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 200,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -38,8 +38,8 @@
 {
 		"Id": "5",
 		"typeOfDish": "Main",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 230,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -47,8 +47,8 @@
 {
 		"Id": "6",
 		"typeOfDish": "Main",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 230,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -56,8 +56,8 @@
 {
 		"Id": "7",
 		"typeOfDish": "Main",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 230,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -65,8 +65,8 @@
 {
 		"Id": "8",
 		"typeOfDish": "Main",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 230,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
@@ -74,11 +74,50 @@
 {
 		"Id": "9",
 		"typeOfDish": "Main",
-		"name": "jdjdjdj",
-		"describe": "djdда ябочная",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "10",
+		"typeOfDish": "Drinks",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "11",
+		"typeOfDish": "Drinks",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+},
+{
+		"Id": "12",
+		"typeOfDish": "Drinks",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
 		"price": 230,
 		"weight": 200,
 		"image": "imgs/main_first.jpg"
 }
+,
+{
+		"Id": "13",
+		"typeOfDish": "Dessert",
+		"name": "Шарлотка",
+		"describe": "Яблочная",
+		"price": 230,
+		"weight": 200,
+		"image": "imgs/main_first.jpg"
+}
+
+
 ]
 }
