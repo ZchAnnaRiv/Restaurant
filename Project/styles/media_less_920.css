@@ -1,0 +1,235 @@
+@import url("general-style.css");
+.container{
+	width: 100%;	
+}
+
+.head-style .logo-text{
+	display: none;
+} 
+
+
+.main-img{
+	height: 100vh;
+}
+
+
+.menu li{
+	list-style: none;
+	margin-right: 10px;
+}
+.menu a{
+	font-size: 24px;
+}
+.menu li a:hover{
+	text-decoration: underline;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.submenu{
+	display: none;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.burger-button{
+	-webkit-transform: scale(2);
+	    -ms-transform: scale(2);
+	        transform: scale(2);
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+.burger-button input{
+	border-radius: 5px;
+	border: none;
+	background-color: rgba(255,255,255,0.2);
+	
+}
+
+.burger-menu-back{
+	z-index: 1;
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.burger-menu{
+	display: block;
+	text-align: left;
+	z-index: 2;
+	width: 60%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top:0;
+	background: #fff;
+	border-radius: 0 100px 0 0;
+	padding-top: 60px;
+}
+.burger-menu ul:not(.submenu){
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+}
+
+.logo-text{
+	font-family: 'Courgette';
+	font-size: 25px;
+	color: #fff;
+}
+.logo-img{
+	width: 70px;
+	height: 70px; 
+}
+
+.big-text{
+	color: #fff;
+	font-size: 37px;
+	text-align: right;
+	font-style: italic;
+
+}
+.flex-column{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.reserve-window{
+	z-index: 3;
+	width: 90%;
+	height: 900px;
+	position: absolute;
+	left: 5%;
+	top:5%;
+	background-color: #fff;
+	border-radius: 20px;
+	padding-bottom: 5%;
+	overflow-y: auto;
+}
+
+.table-reserve {
+	margin-top: 100%;
+}
+.table-reserve input{
+	width: 70px;
+	height: 70px;
+	margin-right: 20px;
+	margin-top: 5px;
+	border-radius: 100px;
+	border: 3px solid #F1D950;
+	background-color: #fff;
+	font-size: 30px;
+	font-family: "Lobster";
+}
+.reserve-form{
+	position: absolute;
+	left: 80px;
+	top: 80px;
+	font-size: 24px;
+
+}
+.reserve-form select, .reserve-form input{
+	border-radius: 20px;
+	height: 35px;
+	font-size: 24px;
+	margin-top: 5px;
+	padding-left: 5%;
+}
+.reserve-form input[type="button"]{
+	background-color: #fff;
+	border: 3px solid #F1D950;
+	width: 370px;
+	padding-left: 0;
+}
+.reserve-form input[type="button"]:hover{
+	background-color: #F1D950;
+}
+.reserve-form input[type="button"]:active{
+	color: #fff;
+}
+
+
+.number-for-submit input[type="submit"]{
+	background-color: #fff;
+	border: 3px dotted #F1D950;
+}
+.top-button img{
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+}
+
+.menu-dishes-list{
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	margin-top: 50px;
+	margin-left: 20%;
+	width: 70%;
+	height: auto;
+
+}
+.menu-dishes-list .dish{
+	width: 300px;
+	margin-top: 10px;	
+	height: auto;
+	border-radius: 20px;
+	border: 1px dashed rgba(0,0,0,0.3);
+}
+.dish-describe{
+	font-size: 24px;
+}
+
+.menu-dishes-list .dish:hover .dish-describe{
+	font-size: inherit;
+}
+
+.menu-dishes-list img{
+	width: 300px;
+	height: 200px;
+	border-radius: 20px;
+}
+.menu-dishes-list .img-size{
+	height: 200px;
+	overflow: hidden;
+
+}
+.menu-dishes-list span{
+	text-align: center;
+	padding-top: 0;
+}
+
+
+.call-button{
+	position: fixed;
+	bottom: 5%;
+	left: 5%;
+	overflow: hidden;
+
+}
+::-webkit-scrollbar{
+	width: 3px;
+}
+

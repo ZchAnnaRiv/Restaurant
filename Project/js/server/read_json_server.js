@@ -14,21 +14,34 @@
 	    }
 	    return Math.ceil(length / quantityElementsOnPage);
 	}
-	function Sorting(jsonObj){
-	    for (var i = 0; i < jsonObj.length-1; i++) {
-	    if (jsonObj[i].price<jsonObj[i+1].price) {
-	        let temp = jsonObj[i];
-	        jsonObj[i] = jsonObj[i+1];
-	        jsonObj[i+1] = temp;
-	    }
-	    }
+	function Sorting(jsonObj, type){
+		switch(type){
+			case '1':   
+			 for (var i = 0; i < jsonObj.length-1; i++) {
+			    if (jsonObj[i].price<jsonObj[i+1].price) {
+			        let temp = jsonObj[i];
+			        jsonObj[i] = jsonObj[i+1];
+			        jsonObj[i+1] = temp;
+				    }
+			    }
+			    break;
+			 case '2':
+				 for (var i = 0; i < jsonObj.length-1; i++) {
+				    if (jsonObj[i].price>jsonObj[i+1].price) {
+				        let temp = jsonObj[i];
+				        jsonObj[i] = jsonObj[i+1];
+				        jsonObj[i+1] = temp;
+					    }
+				    }
+				    break;
+	}
 	    return jsonObj;
 	}
 
 
 	function getCurrentPage(dishes, currentPageNumber, typeOfDish) {
 	    let dishesJson = JSON.parse(dishes)['dishes'];
-	    Sorting(dishesJson);
+	    Sorting(dishesJson,2);
 	    let resultArray = new Array();
 	    let tempArray = new Array();
 	    for (var i = 0; i < dishesJson.length; i++) {
@@ -107,10 +120,10 @@
 		console.log("345");
 		let resultWrite = "";
 		fs.readFile("json/Tables.json", "utf8",
-			function (error, fileValues) {
+			function (error, data) {
 				if (error) throw error;
 				console.log("123");
-				let result = setNewReservedTable(fileValues, request.params.time, request.params.tableNumber, request.params.userNumber);
+				let result = setNewReservedTable(data, request.params.time, request.params.tableNumber, request.params.userNumber);
 				resultWrite = JSON.stringify(result);
 				fs.writeFile("json/Tables.json", resultWrite, function (error, data) {
 					if (error) throw error;

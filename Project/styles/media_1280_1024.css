@@ -1,7 +1,9 @@
+@import url("general-style.css");
 body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Istok Web';
+	overflow-x: hidden;
 
 }
 
@@ -9,6 +11,7 @@ body{
 	max-width: 960px;
 	min-width: 480px;
 	margin-left: 15vw;
+	
 }
 .flex-align{
 	display: flex;
@@ -129,7 +132,7 @@ input:hover{
 	bottom: 15%;
 	left: 18vw;
 	background: linear-gradient(to top,#c1a710, #F1D950, #fbf5d0);
-	width: 25vw;
+	width: 350px;
 	height: 50px;
 	border-radius: 5px;
 	border: none;
@@ -295,12 +298,13 @@ input:hover{
 	margin-top: 80px;
 	margin-left: 0;
 	height: 620px;
+	flex-wrap: wrap;
+
 }
 .menu-dishes-list .dish{
 	margin-right: 20px;
 	width: 300px;
 	height: 300px;
-	flex-wrap: wrap;
 	border-radius: 20px;
 }
 .menu-dishes-list .dish p{
@@ -339,6 +343,7 @@ input:hover{
 .our-team{
 	display: inline-flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 .our-team img{
 	height: 250px;
@@ -440,4 +445,7 @@ footer{
 	height: 100px;
 	background:  #000;
 	color: #fff;
+}
+.burger-menu span, .burger-button{
+	display: none;
 }

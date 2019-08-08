@@ -18,6 +18,28 @@
 	    }
 	    rawFile.send(null)
 	}
+	function setNewReservedTable(day,month,year,hours,phone,idTables) {
+		let day1 = document.getElementById(day).options[document.getElementById(day).selectedIndex].text; 
+		let month1 = document.getElementById(month).options[document.getElementById(month).selectedIndex].text;
+		let year1 = document.getElementById(year).options[document.getElementById(year).selectedIndex].text;
+		let hours1 = document.getElementById(hours).options[document.getElementById(hours).selectedIndex].text;
+		let time = day1 + "." + month1 + "." + year1 + "-" + hours1;
+		console.log(time);
+		let number = document.getElementById(phone).value;
+		console.log(number);
+		let idTable = Number(document.getElementById(idTables).options[document.getElementById(idTables).selectedIndex].text) - 1;
+		console.log(idTable);
+	    var rawFile = new XMLHttpRequest();
+	    let url = "http://localhost:3000/tables/" + time + "/" + idTable + "/" + number;
+	    rawFile.open("GET", url);
+	    rawFile.onreadystatechange = function() {
+	        if (rawFile.readyState === 4) {
+	            var Tables = JSON.parse(rawFile.responseText);
+	            showReservedTables(Tables);
+	        }
+	    }
+	    rawFile.send(null)
+	}
 
 	function getFreeTables() {
 	    let day = document.getElementById('selectDay').value;
@@ -40,7 +62,6 @@
 	    let thatTable1 = 0;
 	    let arrayId = new Array();
 	    for (var i = 0; i < tablesOnPage.length; i++) {
-	        console.log("Pochemy tyt rabotaet..." + tablesOnPage[i].id);
 	        tablesOnPage[i].style.backgroundColor = "#fff";
 	        tablesOnPage[i].style.color = "#000";
 	        tablesOnPage[i].value = i + 1;
@@ -51,12 +72,10 @@
 	        if (tablesJSON[i] !== undefined) {
 
 
-	            let thatTable = tablesJSON[i].Id;
-	            console.log("DO" + tablesOnPage[thatTable].id);
+	            let thatTable = tablesJSON[i].id;
 	            tablesOnPage[thatTable].style.backgroundColor = "#F1D950";
 	            tablesOnPage[thatTable].style.color = "#DF0101";
 	            tablesOnPage[thatTable].value = "R";
-	            console.log("Posle" + tablesOnPage[thatTable].id);
 
 	        }
 	    }
@@ -64,7 +83,7 @@
 	    for (var j = 0; j < freeTables.length; j++) {
 
 	        if (tablesJSON[j] !== undefined) {
-	            arrayId.push(tablesJSON[j].Id);
+	            arrayId.push(tablesJSON[j].id);
 	        }
 	    }
 	    for (var i = 0; i < optionTables.length; i++) {
@@ -121,7 +140,6 @@
 	            tablesOpt.textContent = i + 1;
 	            tablesOpt.setAttribute("class", "option-free-tables");
 	            tablesOpt.setAttribute("display", "block");
-	            console.log("a chto tyt s Tables" + tablesOpt.innerHTML);
 	            document.getElementById('selectTables').appendChild(tablesOpt);
 	        }
 	    }
@@ -143,6 +161,9 @@
 	window.onclick = function(event) {
 	    if (event.target == document.getElementById("ReserveWindowBack")) {
 	        document.getElementById("ReserveWindowBack").style.display = "none";
+	    }
+	    if (event.target == document.getElementById("burger-menu-back")) {
+	        document.getElementById("burger-menu-back").style.display = "none";
 	    }
 
 	}
